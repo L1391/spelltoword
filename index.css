@@ -1,0 +1,38 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, lavender, lightblue,lavender);
+    text-align: center;
+ }
+
+ #top-bar {
+     padding:20px;
+     width: 50%;
+     margin: auto;
+     background-color: white;
+ }
+
+ #bottom-bar {
+     padding: 20px;
+ }
+
+
+ .bar-col {
+    margin: 5px;
+    display: inline;
+ }
+
+ button {
+     width: 80px;
+     height: 50px;
+     border-radius: 25px;
+     background-color: aquamarine;
+     color: white;
+ }
+
+ input[type="text"] {
+     padding: 2px;
+     height: 50px;
+     font-size: large;
+ }

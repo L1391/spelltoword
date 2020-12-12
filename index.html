@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    <head>
+        <meta lang="en">
+        <title>Spell to Words</title>
+        <link rel="stylesheet" href="index.css">        
+        <script src="words.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <!-- Tutorial, settings, and statistics bar-->
+        <div id="top-bar">
+            <div id="tutorial">
+                <h1>Can you recognize words when spelled?</h1>
+                <p>Words will be spelled out letter by letter. When the audio finishes, type or say the word</p>
+            </div>
+            <div id="control-bar">
+                <label for="response-type" class="bar-col">Speak response?</label>
+                <input type="checkbox" name="response-type" id="response-type" value="true"/>
+                <label for="spelling_speed" class="bar-col">Speed</label>
+                <select name="spelling-speed" id="spelling-speed" class="bar-col">
+                    <option value="0.25">0.25</option>
+                    <option value="0.5">0.5</option>
+                    <option value="1" selected>1</option>
+                    <option value="1.25">1.25</option>
+                    <option value="1.5">1.5</option>
+                </select>
+                <p id="total-tries" class="bar-col"></p>
+                <p id="correct-tries" class="bar-col"></p>
+                <p id="streak" class="bar-col"></p>
+            </div>
+        </div>
+        <!-- Initial screen -->
+        <div id="bottom-bar">
+            <div id="start-screen">
+                <button id="start-button" onclick="startGame()">START</button>
+            </div>
+            <!-- Input and feedback screen-->
+            <div id="game-content" style="display: none;">
+                <h1 id="word-display"></h1>
+                <div id="text-input-bar">
+                    <input type="text" name="word-guess" id="word-guess"/>
+                    <button id="text-guess-button" onclick="validateTextGuess()">Guess</button>
+                </div>
+                <div id="speech-input-bar">
+                    <h1>Speak</h1>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
